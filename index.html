@@ -39,6 +39,27 @@
             <div class="textarea-wrapper">
                 <textarea id="complaintInput" placeholder="Saisissez ici le texte de la plainte client à tester..."></textarea>
             </div>
+
+            <div class="audio-panel">
+                <div class="audio-row">
+                    <label class="file-upload">
+                        <i class="fas fa-file-audio"></i>
+                        <span>Uploader un audio</span>
+                        <input id="audioFileInput" type="file" accept="audio/*" multiple>
+                    </label>
+                    <button id="recordBtn" class="btn btn-tertiary">
+                        <i class="fas fa-microphone"></i>
+                        Enregistrer un audio
+                    </button>
+                </div>
+                <div class="audio-meta">
+                    <span id="audioStatus">Aucun audio sélectionné.</span>
+                    <button id="clearAudioBtn" class="btn btn-secondary hidden">Supprimer tous les audios</button>
+                </div>
+
+                <div id="audioItemsContainer" class="audio-items"></div>
+            </div>
+
             <div class="actions">
                 <button id="analyzeBtn" class="btn btn-primary">
                     <i class="fas fa-magnifying-glass-chart"></i>
