@@ -16,8 +16,8 @@ Interface web de test et démonstration du pipeline IA de traitement des plainte
 
 ## Prérequis
 
-- Le micro-service **`gpr_ai_service`** doit être démarré et accessible sur `http://localhost:8001`
-  - Voir le [README de gpr_ai_service](../gpr_ai_service/README.md) pour l'installation et le lancement
+- Le micro-service **`gpr_ai_service`** est accessible en ligne sur `https://ai.gprsicma.gprserver.com` (ou en local sur `http://localhost:8001`)
+  - Voir le [README de gpr_ai_service](../gpr_ai_service/README.md) pour l'installation et le lancement en local
 
 Aucun outil de build, aucune dépendance npm. C'est du HTML/CSS/JS pur.
 
@@ -74,7 +74,7 @@ gpr_ai_playground/
 
 ## Architecture des appels API
 
-Le Playground communique avec `gpr_ai_service` sur `http://localhost:8001`.
+Le Playground communique avec `gpr_ai_service` sur `https://ai.gprsicma.gprserver.com` (ou en local sur `http://localhost:8001`).
 
 | Action | Méthode | Endpoint | Paramètre envoyé |
 |---|---|---|---|
@@ -95,6 +95,6 @@ Le Playground communique avec `gpr_ai_service` sur `http://localhost:8001`.
 
 ## Notes pour le développement
 
-- L'URL du backend est codée en dur dans `app.js` : `http://localhost:8001`. La modifier si le service tourne sur un autre port ou hôte.
+- L'URL du backend est configurée dans `app.js` : `https://ai.gprsicma.gprserver.com` (ou `http://localhost:8001` en local). La modifier si le service tourne sur un autre hôte.
 - Pas de framework JS : vanilla uniquement, pas de `node_modules` à installer.
 - Le thème choisi par l'utilisateur est persisté dans `localStorage`.

@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:8005';
+const API_BASE_URL = 'https://ai.gprsicma.gprserver.com';
 
 const elements = {
     complaintInput: document.getElementById('complaintInput'),
@@ -52,7 +52,7 @@ const analyzeComplaint = async () => {
         displayAnalysis(data);
     } catch (error) {
         console.error("Erreur d'analyse:", error);
-        alert("Erreur lors de la communication avec le service IA. Vérifiez qu'il est bien lancé sur le port 8001.");
+        alert("Erreur lors de la communication avec le service IA (https://ai.gprsicma.gprserver.com).");
     } finally {
         toggleLoader(false);
     }
